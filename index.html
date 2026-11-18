@@ -240,6 +240,38 @@ section{padding:120px 0;position:relative}
 .rep div b{display:block;font-family:Poppins}
 .rep div span{font-size:.85rem;color:rgba(255,255,255,.65)}
 
+/* ===== GOBERNANZA ===== */
+.gov{margin-top:1.6rem;border:1px solid var(--linea);border-radius:24px;padding:2.6rem;background:linear-gradient(180deg,#fff,var(--fondo))}
+.gov-h{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.gov-h h3{font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.gov-h p{color:var(--gris);max-width:46ch;font-size:.95rem}
+.nivel{display:inline-flex;align-items:center;gap:.6rem;font-family:Poppins;font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--verde);padding:.55rem 1.1rem;border-radius:999px;margin-bottom:1rem}
+.nivel.n2{background:var(--navy)}.nivel.n3{background:var(--azul)}
+.barra{display:flex;height:12px;border-radius:999px;overflow:hidden;margin-bottom:1.2rem}
+.barra i{display:block}
+.socios,.junta,.reps{display:grid;gap:1rem}
+.socios{grid-template-columns:repeat(5,1fr)}
+.socio{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:1.3rem 1rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.5rem;transition:.3s var(--ease)}
+.socio:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(20,41,74,.45)}
+.socio img{height:48px;width:auto}
+.socio b{font-family:Poppins;font-size:.86rem;color:var(--navy);line-height:1.25}
+.socio .pct{font-family:Poppins;font-weight:700;font-size:1.5rem;color:var(--verde);line-height:1}
+.socio.mayor{border:2px solid var(--verde);background:linear-gradient(180deg,rgba(91,163,59,.08),#fff)}
+.flecha{display:flex;justify-content:center;margin:1.2rem 0;color:#B5C0CE}
+.junta{grid-template-columns:repeat(5,1fr)}
+.miembro{background:#fff;border:1px solid var(--linea);border-top:3px solid var(--navy);border-radius:14px;padding:1rem;text-align:center}
+.miembro b{display:block;font-family:Poppins;font-size:.9rem;color:var(--navy);line-height:1.25}
+.miembro span{display:block;font-size:.78rem;color:var(--gris);line-height:1.4;margin-top:.2rem}
+.reps{grid-template-columns:1fr 1fr;max-width:640px;margin:0 auto}
+.rep2{background:#fff;border:1px solid var(--linea);border-top:3px solid var(--azul);border-radius:14px;padding:1rem;text-align:center}
+.rep2 b{display:block;font-family:Poppins;color:var(--navy)}
+.rep2 span{font-size:.8rem;color:var(--gris)}
+.gov-nota{margin-top:1.8rem;background:var(--navy);color:rgba(255,255,255,.85);border-radius:14px;padding:1rem 1.3rem;font-size:.86rem;text-align:center}
+.gov-fuente{margin-top:.8rem;font-size:.76rem;color:var(--gris);text-align:center}
+.gc{text-align:center}
+@media(max-width:1060px){.socios,.junta{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.gov{padding:1.6rem 1.2rem}.socios,.junta{grid-template-columns:1fr 1fr}.reps{grid-template-columns:1fr}}
+
 /* ===== ALIADOS ===== */
 .aliados{background:var(--fondo)}
 .al-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem}
@@ -350,7 +382,6 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
       <li><a href="#rol">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#proceso">Cómo trabajamos</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
       <li><a href="#aliados">Aliados</a></li>
       <li><a href="#contacto" class="btn btn-verde">Contáctenos</a></li>
     </ul>
@@ -533,61 +564,6 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
   </div>
 </section>
 
-<!-- EXPERIENCIA -->
-<section id="experiencia">
-  <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Trayectoria verificable</span>
-      <h2 class="h2">Experiencia acumulada</h2>
-    </div>
-    <div class="kpis">
-      <div class="kpi rv"><b>$<span class="count" data-to="788">0</span>,0 <small>millones</small></b><span>Valor gestionado en contratos, convenios y apoyos (antes de IVA)</span></div>
-      <div class="kpi rv d1"><b><span class="count" data-to="4">0</span></b><span>Proyectos contratados y gestionados en 2026</span></div>
-      <div class="kpi rv d2"><b style="font-size:clamp(1.4rem,2.2vw,1.9rem)">Público + Privado</b><span>Entidades territoriales y sector empresarial</span></div>
-      <div class="kpi rv d3"><b><span class="count" data-to="3">0</span></b><span>Proyectos en ejecución a noviembre de 2026</span></div>
-    </div>
-    <div class="proys">
-      <article class="proy rv">
-        <div class="im"><img src="foro.webp" alt="" loading="lazy"></div>
-        <div class="bd">
-          <div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado">En ejecución</span></div>
-          <h3>Concejo de Manizales</h3><div class="ref">Foro Diversidad · Territorios que nos unen</div>
-          <p>Diseño y operación del foro sobre diversidad como motor de desarrollo, neurodiversidad y diversidad étnica, con conferencistas nacionales. Teatro Fundadores, 3 de diciembre de 2026.</p>
-          <div class="val"><b>$90.000.000</b><small>Total de apoyos</small></div>
-        </div>
-      </article>
-      <article class="proy rv d1">
-        <div class="im"><img src="cascada.webp" alt="" loading="lazy"></div>
-        <div class="bd">
-          <div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado">En ejecución</span></div>
-          <h3>Gobernación de Caldas</h3><div class="ref">Secretaría de Medio Ambiente · Convenio Interadministrativo 2026-2041</div>
-          <p>Cooperación interadministrativa con la autoridad departamental en la gestión ambiental del territorio caldense.</p>
-          <div class="val"><b>$282.376.078</b><small>Vigente hasta 30/12/2026</small></div>
-        </div>
-      </article>
-      <article class="proy rv d2">
-        <div class="im"><img src="marmato.webp" alt="" loading="lazy"></div>
-        <div class="bd">
-          <div class="tags"><span class="sector priv">SECTOR PRIVADO</span><span class="estado">En ejecución</span></div>
-          <h3>Fundación Aris Mining</h3><div class="ref">Contrato FAM 373 de 2026</div>
-          <p>Laboratorio Territorial Paisaje Cultural Minero Vivo – Ruta del Oro de Caldas: atlas patrimonial, guiones interpretativos, talleres comunitarios, libro y micrositio en Marmato, Supía y Riosucio.</p>
-          <div class="val"><b>$300.000.000 <small style="font-size:.7rem">+ IVA</small></b><small>Plazo 6 meses</small></div>
-        </div>
-      </article>
-      <article class="proy rv d3">
-        <div class="im"><img src="pilar1.webp" alt="" loading="lazy"></div>
-        <div class="bd">
-          <div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado fin">Terminado</span></div>
-          <h3>Gobernación de Caldas</h3><div class="ref">Contrato Interadministrativo 2026-1036</div>
-          <p>Restauración ecológica del Predio Normandía 2, orientada a la protección de ecosistemas estratégicos y fuentes hídricas.</p>
-          <div class="val"><b>$115.579.181</b><small>Terminado 30/06/2026</small></div>
-        </div>
-      </article>
-    </div>
-    <p class="corte">Corte: noviembre de 2026 · Cifras en pesos colombianos.</p>
-  </div>
-</section>
-
 <!-- VALOR -->
 <section class="valor">
   <div class="wrap">
@@ -657,6 +633,39 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
         </div>
       </div>
     </div>
+    <div class="gov rv">
+      <div class="gov-h">
+        <h3>Gobernanza corporativa</h3>
+        <p>Estructura de gobierno que articula la participación pública y privada para el desarrollo sostenible del territorio.</p>
+      </div>
+      <div class="gc"><span class="nivel">Asamblea General de Accionistas</span></div>
+      <div class="barra" aria-hidden="true"><i style="width:52%;background:var(--verde)"></i><i style="width:12%;background:var(--azul)"></i><i style="width:12%;background:#3E7A3A"></i><i style="width:12%;background:#E8A33A"></i><i style="width:12%;background:var(--navy-3)"></i></div>
+      <div class="socios">
+        <div class="socio mayor"><img src="data:image/webp;base64,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" alt=""><span class="pct">52 %</span><b>Municipio de Marulanda, Caldas</b></div>
+        <div class="socio"><img src="data:image/webp;base64,UklGRmwFAABXRUJQVlA4WAoAAAAQAAAAMwAALwAAQUxQSP8CAAABCTNt26iJtKv8CXcgIvo/Ado2dUM/Bny5JApDIJC0v/kEEZG6UNC2jZTxB73dlx6EiAmYADq3rR2T4BGd53nLY9u2jcg2MoezJlKoyJk9P8D2ZLZtT1vVpe99b9DVX73VETEBROheAOvtut9OO2yEVyrBQ6hUKiKpn2K/iLGxfBO8W5H89ON336XHqMbqgdbWyjxywCUnsDJpmA1bXZB8B2MFu1x1DaRkTrBheRvCqJ51cYvCK864m4Ktjt+MIlRZg41HY5cjGQRjDRq1W8H+W+LGGrUhxuYkY83GFQKSsVZFbwUfMV6pHAxAfLToGkcyRp1G/u/7LvInZ+J3VEb8hRUPM04Zz9/1u0rBn2Yv/W4pm+CHx/9c1ylt/OaL17rIrcC77x++CSrn6ee0zg3yTBLdl9mTwigtFv/XwaSQR85nH2sDZIzam+dMybMkG7z077rrkLPf3uBkjIyCr19pe8BGE/9294x4BlV473uqiZyJ97UlKUNi+u0FCiOr8xQtsv71IWEwIKt8+jM2zvLbND4gc2JilvVHErSnSLGdS7xAaKARjA41TGSWd+5HHaycM0O1VWmRO9nHv3iap7RMP5EUA9ltcAvGbDn6i9RS0SF79O9e90i3jFj8k/U3ps0478ZgIvkqhi8zu0SX/DF8+qBH+HECDZMHekvFDMpHcQMGTD5IXGFav4VgljGqcipEgNPDEPkOrFtnjjEaJ7QwANtqVglgHZaqzGHKZuywRzRWhs2u9mhiY2jTwciv+uYYQ9N9W7VJ7AqwEBmjhRbGcM1tcGOFHRuCqa4rm4iRstVbLsZaUaRo5JaYmKeseOq0h9oYGxrZU4V/fmdEb37zJdgPu/RqlkPRGbz1Dy1AEeDRy6BwH0FJwXjpiT5CaghTOPTSy5oomtkQSRZg+fE7PiGI//tccv5elO+++8Ktb+MSuc2J1I464rB9Nlq3llJv9tePP/voRwieGKt7AYQN1msWRXeuC1iFgrGbhxgZ6vVK6HZZq2E9q+NF6rTJDgBWUDggRgIAAJAMAJ0BKjQAMAA+tVKiTSckIyIqtAkA4BaJbADAXBgnTh8csKvA6iDeYF/PuDlsaWKaR44tQDpM/sAMHvkMIE8zxG4Drg3n3h8wZF6EqwUxwlh10YdSY7Clf/ZhO3Lcazd9TqG0cbag4eLu29gA/t6WOfpYIimPvMoCKSKfL9/O5VjcuheKMZyc7SCjspaGInXZQY0qwUfM2zfI66AkQOemxLTYx8P1XOWd50IPgUcf75MpMC92014EpfBt6/G9JY696bWalYsOX0RuQ8emjyMCvqboQY5XT+zJNFchp1vU21dL1dk15T0hRDHpqA34H1NzQuPc+ca6Pjcbtuv1G8cgoyFG3e2wt/EADo93pgaOlH1hXi5cJ/ktBQPn2/zMahzAoXbgVya05z6Rd6SHXKU9J39n2QI9EFv53M6m+cmyulscIvVlsWVYxZb/L5A5Mze0azYPog810u6566avTVRJBcG2BiCJCcHJ2vck6JMoj6MUiOrJ18WIn723RFTzqlcNIr3oIRZSiWCSuRhxD5fGj3ofzr6BYDJ4X5YpE4SRkv6P1XPAMThkJEjpmmnU1qArQjzK/H2y9/3rE/vahMHE/rof19pSK4Hw/NBY3rGlv+CZe6zy8xYPt9bdL8X4ywhhrTZq8fcrc7Ym4ipC0ytweC6fxvZ7/YPbXDJVI2F7aIXOmnl3SkP2bPMGeLLIpo6wsktTgLRvthzJpsb9GwdAKBfem58v3MlStfr4nOif2b08E/h4D+sihqwTY8kW1/W8ZWjAAA==" alt=""><span class="pct">12 %</span><b>Corporación Alianza para el Desarrollo Social</b></div>
+        <div class="socio"><img src="data:image/webp;base64,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" alt=""><span class="pct">12 %</span><b>Asociación Ecohorizonte</b></div>
+        <div class="socio"><img src="data:image/webp;base64,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" alt=""><span class="pct">12 %</span><b>Corporación para el Fomento y Desarrollo Territorial</b></div>
+        <div class="socio"><img src="data:image/webp;base64,UklGRswIAABXRUJQVlA4WAoAAAAQAAAAQgAALwAAQUxQSNAEAAABoHZtmyFJ3tATGdGatW3btm3btm3btm3btjFY296eeOO9P1RVVtVuREyAOhhiJUmz7XPObU++POybH7/7fOi7zz965clHrDWOGlMM6nYM0pib3vDq33Twq5du3meaHkkxhm5UQXHR+34AMCuleNNSipk5wODQaxYfU1KMoUMhSau+CpgVp4NeLAN8fc3yk0hKHamkee4HN6eLXsyBX89ZZhR1Mqn3oEwpdN+tAEOPHi2EdpJmfxE3/otezAGmU9VG0lo/MZLuu+UC+I/DblwrBElKrZJ2BqPbbgbwxZPXXfn0GxuoUmNokbQPpdBdNwN+e/qCNda/4vW/4dkYQ0PLpO0wp6slA19ev/0k0vEAuTyoqlbUQsWcbhaDP69ZZyxJYcJBcsG4S1E1q2rcTym0XbyVZ/hwv6klxdSjiX/BwbizXtTtZNr1QmuDoVsOSDEGqdIUfzW7o1bUWmTaNXjhM3egOL8fNYaUKjVWmqk0u61OqPrf89JGcYZtdNzfBdzgqqmkGNQ8ahEcyNxYJ2lHjPoZTl71AQCDl5dQ7I9qHbUx1uR8pRYhjD7USy033llsy78pYPy1R9SQMXpDjaQzyU32r5G0LkZdg7OnuQIMLzw6p6okxTpBz2MNvlWNqKs918n8tspcw8mOwcFSCqofNMGvOOAspdis0mR/4zUyr024USFD5re1VFVqN2krDCh8M6ZCs6R1MVpn7qkOxwtk3p1LKajtSo83ydymqOZRV3tu4ca5OovsuHHzmEpqP4b5cqHJgSG1CGkopZkb++gyMrhxghTVwaRryYD7X9OqaqFxf8WbuLGnriGDF3ZSDGo7xIEw92ABMH9alVpPM7KZF/bSqYwEL2yh3qD24/iT6CmsCduGVGMRCoCbb6ODyOCZLTR2UCfH1+4YQPGvBhRqrI41ZHbXjmSHzB4aq1Ine7XgoHmDcYCiaq7SJHOuFh00h5EcpzEqdTJpss8pAKV8PWoIdVZoMJ7sHXcEBTJnavRKnUya9H0KjZlNFNVO4YMJdAsZMleoL6qDoUfTfITRaNyjqNpLUtz+nFsHkSFzbxUrtR+StMhXGI2FL8frqRdnh8xOWqqYY7wxSqjUbqiSNOSwfzEavdgS1YBqjzLpv3CDxv2Egvt3UyuqdQgpxhQljbr9e1Bo9MwmGkP1Y/rAPxhNN5JxYzklKVQxxSqoZf/8xw4HcxqLsYuGqN34AbtoczJkTlJPlaJaxjEnnWPl3a4dBlihqcFu6lG7Ib78xfijfe0F4/W+viCpf4YVD7vlsWdefv+7P2iaC00989v6SmpPMy6u8zE8+4KS5tnlpmFGzZJzobkbvDynetTJAS2KOca+mumQl2gs2cxKcaemGwwe3acedbQ3PYphXDz7Zb+BjczFadvN4J+rZ5aiOhq1Gob5i+fTsuRspbgD7sUsF+CrC6aTYlBnq77nvRT4mZ8fv+am+54d/hetnZZfPbjTmFKs1OGkdSmZ1zYdevFEakxTrHbQ2fe/PuInA8pPw1644YRVx5DUU6nj1cAH/i8vjK8+qa+vt6dS8/5xZ5x/4flmHK9PjT09Qd1cmUHuHEVRKagx9PSPMlpSzRBTDOpu/5uF8ypVCmozhCrGqgpB/8Gt4DDFSv/rffLZSkH/b1ZQOCDWAwAA0BAAnQEqQwAwAD6pOplJpiMiITd6KgDAFQlsAMdjhQ0REUhMDuBHtt/Mf58emAbzM/FmoLIueHuLFYE1HxxfVvsEfrTvmP7LJI6wLZxw2PMc//xK8Ll+ZD/VsEOVLHhxzNzzKQLq76XEQyz59wQK1OqgEdN70Rm7eR5B13AsTfjkAEJq/Kmv0BOXycPmwgAA/v5KQvvybfvzsh9A+E61hzIID0/D0OgrhVMnVK6DJwMI6FntybVI5NpLPuL8GWsV/UjQ5JfCT5fMxZdvghIU40/9XMkUfnAfkFQ4BoN/arKSwbqz3cJ/oQqiTkH+Y47pgBkk6xNxerYg5zN2nQLbLBvJhUFPOssFYWO+Pfy0byhvQh9Plg+1T2xB4fqbw6Gr77i/BR5yXL/LfOyHr3GyHuNSsf69Rsobr3AbAYDKGb422GbbJFHl07djYJ3/eTiGKHKq7yEzrsjam9xOAW2uMuuoYjfDWU3vWVgi47jyJZfh6pGGE0dDtABUuJWUPyJtrcBb4aERpqg3e912bODfdzlrwCMGglTFqQcfArqK7+8eNhMCBsCjReOAyPqccEfTlVm1URRW8vlNkBAZe1Pyg55Jq6C9qPcWp03x3QHSGgBeDv7tVSOQcKZK/VlDdJpdaSJloJHtZ9Ifz4V9kAJHMshZtVbC48mnQfj6NJ/thB8so/6oMKZDC9o7J0+pbkjwKI3IF1HWy0I63pHHCJh7LPZlfGP0C/iVmFRmy0qLULQ9WHHjuLMgfOlYmnH7u3kUjEX3nwFvylSTkJpMl47qFi/eReTnIIonBxPIdH51X4/S8j2QtlTKW/BFeK3wj/IApC/l9R+/BMICc1jCqcinzRbzdgF4F4NuWBwmsO5a8CbddxdPD+u+hSuUvIv0yYEJ4r7n/53S+O0YFi2MP/2PwB7vbwnPF71asxnt51M9oHEvGZAWFvmP4O4nJ7l3aE3Qo8313NsOQ52uh7/WLWOzwxiK6TlapkppNUbU3C4Qnz06QRZjdRSTA2JWdPX3y2rwkgHsf7ZMCjlZVaumSkQA9Zbh5oGVGpq1L/L6bkcEfNOir/TQfsliYSq8beq12P1BRm4Usd3Qh4WwzqL9x0Ic2sOypoAojJPfYcUk9W4/6yNKwWK3Gg9axlxh3LPLthfrFzajIcn7I6/wNlnE85HozyhcSdnIbv7SrVZe8Z/uJYAXAUc4SDweiBZ/UJRCN/AFk/qIOjrKuOm8AsbS/mYPSPMf7NM+mDpWjKYjzG4jK48T9v+ZKztxl43zO/+sGFdTvVzc/2rlUomwXz/KlCDBT9sAAAAAAA==" alt=""><span class="pct">12 %</span><b>Sostenibilidad Estratégica S.A.S.</b></div>
+      </div>
+      <div class="flecha"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></div>
+      <div class="gc"><span class="nivel n2">Junta Directiva</span></div>
+      <div class="junta">
+        <div class="miembro"><b>Leonardo Andrés Giraldo Botero</b><span>Delegado del Municipio de Marulanda</span></div>
+        <div class="miembro"><b>Luis Henry Sánchez Guzmán</b><span>Delegado de Corpoallianz</span></div>
+        <div class="miembro"><b>Nixon Walter Silva Erazo</b><span>Delegado de Ecohorizonte</span></div>
+        <div class="miembro"><b>Adriana Cardona Escobar</b><span>Delegada de Juntos Construyendo</span></div>
+        <div class="miembro"><b>Nicolás Alberto Gómez Morales</b><span>Delegado de Sostenibilidad Estratégica S.A.S.</span></div>
+      </div>
+      <div class="flecha"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></div>
+      <div class="gc"><span class="nivel n3">Representación legal</span></div>
+      <div class="reps">
+        <div class="rep2"><b>Adriana Cardona Escobar</b><span>Representante legal pro tempore</span></div>
+        <div class="rep2"><b>Jhonatan Stiven Tamayo Ortiz</b><span>Representante legal suplente</span></div>
+      </div>
+      <div class="gov-nota">Los miembros de la Junta Directiva son delegados institucionales de las entidades accionistas. Sus cargos corresponden a puestos institucionales y no a representaciones personales.</div>
+      <p class="gov-fuente">Fuente: Acto constitutivo de FODESA (julio de 2025) y Certificado de Cámara de Comercio de Manizales por Caldas (septiembre de 2026).</p>
+    </div>
+
   </div>
 </section>
 
@@ -717,7 +726,7 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
 <footer>
   <div class="wrap foot">
     <img src="logo-blanco.png" alt="FODESA">
-    <nav><a href="#rol">Nosotros</a><a href="#servicios">Servicios</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a></nav>
+    <nav><a href="#rol">Nosotros</a><a href="#servicios">Servicios</a><a href="experiencia.html">Nuestra experiencia</a><a href="#contacto">Contacto</a></nav>
     <span>© <span id="y"></span> FODESA · NIT 901.966.569-2</span>
   </div>
 </footer>
