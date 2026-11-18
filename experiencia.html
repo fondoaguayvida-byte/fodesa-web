@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra experiencia · FODESA</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14294A;--navy2:#0D1C35;--verde:#5BA33B;--verde2:#7DC155;--azul:#2E86C1;--gris:#5E6B7D;--linea:#E3E8EF;--fondo:#F4F7FA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:#14243D;line-height:1.6;background:#fff}
+h1,h2,h3{font-family:Poppins,sans-serif;color:var(--navy);line-height:1.15}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+header{background:#fff;border-bottom:1px solid var(--linea)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+.nav img{height:46px}
+.nav a.back{font-family:Poppins;font-weight:600;font-size:.9rem;color:var(--navy);text-decoration:none}
+.nav a.back:hover{color:var(--verde)}
+.top{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;padding:80px 0 70px}
+.eyebrow{font-family:Poppins;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--verde2)}
+.top h1{color:#fff;font-size:clamp(2rem,4.4vw,3.2rem);margin:.8rem 0 .8rem}
+.top p{color:rgba(255,255,255,.78);max-width:60ch;font-size:1.08rem}
+main{padding:70px 0 100px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:2.2rem}
+.kpi{border-radius:20px;padding:1.8rem;background:var(--fondo);border-top:4px solid var(--navy)}
+.kpi:nth-child(2){border-color:var(--verde)}.kpi:nth-child(3){border-color:var(--azul)}
+.kpi b{display:block;font-family:Poppins;font-size:clamp(1.6rem,2.8vw,2.4rem);color:var(--navy);line-height:1.1}
+.kpi b small{font-size:.5em}
+.kpi span{color:var(--gris);font-size:.9rem}
+.proys{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.proy{border:1px solid var(--linea);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.proy:hover{transform:translateY(-5px);box-shadow:0 24px 46px -30px rgba(20,41,74,.5)}
+.proy img{height:170px;width:100%;object-fit:cover}
+.bd{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.tags{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
+.sector{font-family:Poppins;font-size:.64rem;letter-spacing:.12em;font-weight:600;padding:.25rem .55rem;border-radius:6px;background:rgba(46,134,193,.12);color:var(--azul)}
+.sector.priv{background:rgba(91,163,59,.14);color:#3F7F24}
+.estado{font-size:.74rem;color:var(--gris);display:flex;align-items:center;gap:.35rem}
+.estado::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--verde)}
+.estado.fin::before{background:#9AA5B4}
+.proy h3{font-size:1.06rem}
+.ref{font-size:.78rem;color:var(--gris);margin-bottom:.7rem}
+.proy p{font-size:.88rem;color:var(--gris);flex:1}
+.val{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--linea);display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+.val b{font-family:Poppins;color:var(--navy)}
+.val small{font-size:.72rem;color:var(--gris);text-align:right}
+.corte{font-size:.8rem;color:var(--gris);margin-top:1.2rem}
+.cta{margin-top:3rem;display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.95rem 1.6rem;border-radius:999px;font-family:Poppins;font-weight:600;font-size:.92rem;text-decoration:none}
+.btn-v{background:var(--verde);color:#fff}.btn-n{border:1.5px solid var(--navy);color:var(--navy)}
+footer{background:#0A1629;color:rgba(255,255,255,.55);padding:36px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+footer img{height:50px}
+@media(max-width:1060px){.kpis,.proys{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.kpis,.proys{grid-template-columns:1fr}.wrap{padding:0 20px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a href="/"><img src="logo.png" alt="FODESA"></a><a class="back" href="/">← Volver al inicio</a></div></header>
+
+<section class="top"><div class="wrap">
+  <span class="eyebrow">Trayectoria verificable</span>
+  <h1>Nuestra experiencia</h1>
+  <p>Contratos, convenios y apoyos gestionados por FODESA con entidades públicas y privadas.</p>
+</div></section>
+
+<main><div class="wrap">
+  <div class="kpis">
+    <div class="kpi"><b style="white-space:nowrap;font-size:clamp(1.5rem,2.2vw,2rem)">$788,0 <small>millones</small></b><span>Valor gestionado en contratos, convenios y apoyos (antes de IVA)</span></div>
+    <div class="kpi"><b>4</b><span>Proyectos contratados y gestionados en 2026</span></div>
+    <div class="kpi"><b style="font-size:clamp(1.3rem,2vw,1.8rem)">Público + Privado</b><span>Entidades territoriales y sector empresarial</span></div>
+    <div class="kpi"><b>3</b><span>Proyectos en ejecución a noviembre de 2026</span></div>
+  </div>
+  <div class="proys">
+    <article class="proy"><img src="foro.webp" alt="">
+      <div class="bd"><div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado">En ejecución</span></div>
+      <h3>Concejo de Manizales</h3><div class="ref">Foro Diversidad · Territorios que nos unen</div>
+      <p>Diseño y operación del foro sobre diversidad como motor de desarrollo, neurodiversidad y diversidad étnica, con conferencistas nacionales. Teatro Fundadores, 3 de diciembre de 2026.</p>
+      <div class="val"><b>$90.000.000</b><small>Total de apoyos</small></div></div></article>
+    <article class="proy"><img src="cascada.webp" alt="">
+      <div class="bd"><div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado">En ejecución</span></div>
+      <h3>Gobernación de Caldas</h3><div class="ref">Secretaría de Medio Ambiente · Convenio Interadministrativo 2026-2041</div>
+      <p>Cooperación interadministrativa con la autoridad departamental en la gestión ambiental del territorio caldense.</p>
+      <div class="val"><b>$282.376.078</b><small>Vigente hasta 30/12/2026</small></div></div></article>
+    <article class="proy"><img src="marmato.webp" alt="">
+      <div class="bd"><div class="tags"><span class="sector priv">SECTOR PRIVADO</span><span class="estado">En ejecución</span></div>
+      <h3>Fundación Aris Mining</h3><div class="ref">Contrato FAM 373 de 2026</div>
+      <p>Laboratorio Territorial Paisaje Cultural Minero Vivo – Ruta del Oro de Caldas: atlas patrimonial, guiones interpretativos, talleres comunitarios, libro y micrositio en Marmato, Supía y Riosucio.</p>
+      <div class="val"><b>$300.000.000 <small>+ IVA</small></b><small>Plazo 6 meses</small></div></div></article>
+    <article class="proy"><img src="pilar1.webp" alt="">
+      <div class="bd"><div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado fin">Terminado</span></div>
+      <h3>Gobernación de Caldas</h3><div class="ref">Contrato Interadministrativo 2026-1036</div>
+      <p>Restauración ecológica del Predio Normandía 2, orientada a la protección de ecosistemas estratégicos y fuentes hídricas.</p>
+      <div class="val"><b>$115.579.181</b><small>Terminado 30/06/2026</small></div></div></article>
+  </div>
+  <p class="corte">Corte: noviembre de 2026 · Cifras en pesos colombianos.</p>
+  <div class="cta"><a class="btn btn-v" href="/#contacto">Hablemos de su proyecto</a><a class="btn btn-n" href="/">Volver al inicio</a></div>
+</div></main>
+
+<footer><div class="wrap"><img src="logo-blanco.png" alt="FODESA"><span>© 2026 FODESA · NIT 901.966.569-2</span></div></footer>
+</body>
+</html>
