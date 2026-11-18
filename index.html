@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FODESA · Fondo para el Desarrollo Sostenible Ambiental</title>
+<meta name="description" content="FODESA articula soluciones sostenibles desde el territorio: restauración ecológica, compensaciones ambientales, turismo regenerativo, gobernanza del agua e innovación territorial. Empresa de economía mixta de mayoría pública.">
+<meta property="og:title" content="FODESA · Articulamos soluciones sostenibles desde el territorio">
+<meta property="og:description" content="Pasamos del discurso ambiental a la gestión de proyectos y la inversión con propósito.">
+<meta property="og:image" content="https://fodesa.com.co/assets/hero-territorio.webp">
+<meta property="og:url" content="https://fodesa.com.co">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14294A">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-territorio.webp">
+<style>
+:root{
+  --navy:#14294A; --navy-2:#0D1C35; --navy-3:#1E3A63;
+  --verde:#5BA33B; --verde-2:#7DC155; --azul:#2E86C1; --azul-2:#5BB0E6;
+  --gris:#5E6B7D; --linea:#E3E8EF; --fondo:#F4F7FA; --blanco:#fff; --tinta:#14243D;
+  --r:20px; --max:1240px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tinta);background:var(--blanco);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:Poppins,Inter,sans-serif;line-height:1.12;letter-spacing:-.01em;color:var(--navy)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-family:Poppins,sans-serif;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--verde)}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.h2{font-size:clamp(2rem,4vw,3.2rem);margin:.9rem 0 1.1rem}
+.lead{color:var(--gris);font-size:1.12rem;max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.7rem;border-radius:999px;font-family:Poppins,sans-serif;font-weight:600;font-size:.95rem;text-decoration:none;transition:transform .25s var(--ease),background .25s,box-shadow .25s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn-verde{background:var(--verde);color:#fff;box-shadow:0 12px 30px -12px rgba(91,163,59,.8)}
+.btn-verde:hover{background:#4E9330}
+.btn-vidrio{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px)}
+.btn-vidrio:hover{background:rgba(255,255,255,.22)}
+.btn-navy{background:var(--navy);color:#fff}
+.arrow{transition:transform .25s var(--ease)}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ===== NAV ===== */
+header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s,box-shadow .35s,height .35s}
+header.solid{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;transition:height .35s}
+header.solid .nav{height:70px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:54px;width:auto;transition:height .35s}
+header.solid .logo img{height:44px}
+.logo .l-blanco{display:block}.logo .l-color{display:none}
+header.solid .logo .l-blanco{display:none}header.solid .logo .l-color{display:block}
+.menu{display:flex;align-items:center;gap:2.1rem;list-style:none}
+.menu a{text-decoration:none;font-weight:500;font-size:.93rem;color:rgba(255,255,255,.88);transition:color .2s}
+.menu a:hover{color:#fff}
+header.solid .menu a{color:var(--gris)}
+header.solid .menu a:hover{color:var(--navy)}
+.menu .btn{padding:.7rem 1.3rem;color:#fff!important}
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:#fff;transition:.3s}
+header.solid .burger span{background:var(--navy)}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+body.menu-open .burger span:nth-child(1){top:21px;transform:rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;background:var(--navy-2)}
+.hero-bg{position:absolute;inset:0;background:url(assets/hero-territorio.webp) center 35%/cover;transform:scale(1.12);animation:kb 22s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,28,53,.55) 0%,rgba(13,28,53,.25) 30%,rgba(13,28,53,.6) 62%,rgba(13,28,53,.96) 100%),linear-gradient(90deg,rgba(13,28,53,.7) 0%,rgba(13,28,53,0) 65%)}
+.hero-in{position:relative;z-index:2;padding-top:150px;padding-bottom:56px}
+.hero .eyebrow{color:var(--verde-2)}
+.hero h1{color:#fff;font-size:clamp(2.6rem,6.4vw,5.4rem);font-weight:700;max-width:16ch;margin:1.1rem 0 1.4rem;letter-spacing:-.025em}
+.hero h1 .g{background:linear-gradient(90deg,var(--verde-2),var(--azul-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.3rem);color:rgba(255,255,255,.86);max-width:52ch;margin-bottom:2.4rem}
+.ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);background:rgba(13,28,53,.45);backdrop-filter:blur(10px)}
+.hero-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.hs{padding:1.6rem 1.4rem;border-left:1px solid rgba(255,255,255,.12)}
+.hs:first-child{border-left:0;padding-left:0}
+.hs b{display:block;font-family:Poppins,sans-serif;font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:700;color:#fff;line-height:1.1}
+.hs>span{font-size:.85rem;color:rgba(255,255,255,.7)}
+.scroll-cue{position:absolute;right:28px;bottom:130px;z-index:2;writing-mode:vertical-rl;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:.8rem}
+.scroll-cue::after{content:"";width:1px;height:60px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+section{padding:120px 0;position:relative}
+
+/* ===== CONTEXTO ===== */
+.contexto{background:var(--navy);color:#fff;overflow:hidden}
+.contexto::before{content:"";position:absolute;right:-200px;top:-200px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(46,134,193,.35),transparent 65%)}
+.contexto h2{color:#fff}
+.contexto .lead{color:rgba(255,255,255,.75)}
+.ctx-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:5rem;align-items:start;position:relative}
+.ctx-list{display:grid;gap:0}
+.ctx{display:grid;grid-template-columns:64px 1fr;gap:1.2rem;padding:1.8rem 0;border-top:1px solid rgba(255,255,255,.14)}
+.ctx:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+.ctx .n{font-family:Poppins;font-weight:700;font-size:1.1rem;color:var(--verde-2)}
+.ctx h3{color:#fff;font-size:1.3rem;margin-bottom:.4rem}
+.ctx p{color:rgba(255,255,255,.7);font-size:.98rem}
+
+/* ===== ROL ===== */
+.rol-top{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.hub{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;padding-top:90px}
+.hub-core{position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-family:Poppins;font-weight:700;letter-spacing:.14em;padding:.9rem 2rem;border-radius:14px;box-shadow:0 18px 40px -18px rgba(20,41,74,.7);z-index:2}
+.hub-lines{position:absolute;top:24px;left:16.66%;right:16.66%;height:66px;border:2px solid var(--linea);border-bottom:0;border-radius:18px 18px 0 0}
+.hub-lines::after{content:"";position:absolute;left:50%;top:-24px;height:90px;border-left:2px solid var(--linea)}
+.aud{background:var(--fondo);border-radius:var(--r);padding:2.2rem 2rem;border-top:4px solid var(--azul);transition:transform .35s var(--ease),box-shadow .35s}
+.aud:nth-child(3){border-color:var(--verde)}.aud:nth-child(4){border-color:var(--navy)}
+.aud:hover{transform:translateY(-6px);box-shadow:0 24px 50px -28px rgba(20,41,74,.45)}
+.aud .ic{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--navy);margin-bottom:1.2rem;box-shadow:0 6px 18px -10px rgba(20,41,74,.4)}
+.aud h3{font-size:1.25rem;margin-bottom:.5rem}
+.aud p{color:var(--gris);font-size:.97rem}
+
+/* ===== SERVICIOS ===== */
+.servicios{background:var(--fondo)}
+.serv-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.tabs{display:flex;gap:.5rem;background:#fff;padding:.4rem;border-radius:999px;box-shadow:0 4px 20px -12px rgba(20,41,74,.3)}
+.tab{border:0;background:none;padding:.75rem 1.3rem;border-radius:999px;font-family:Poppins;font-weight:600;font-size:.88rem;color:var(--gris);cursor:pointer;transition:.25s}
+.tab.on{background:var(--navy);color:#fff}
+.tab[data-t="1"].on{background:var(--verde)}.tab[data-t="2"].on{background:var(--azul)}
+.panel{display:none;grid-template-columns:1fr 1.1fr;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 70px -40px rgba(20,41,74,.5);min-height:560px}
+.panel.on{display:grid;animation:fade .6s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.panel-img{position:relative;background-size:cover;background-position:center;min-height:340px}
+.panel-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(13,28,53,.88))}
+.panel-img .cap{position:absolute;left:2.2rem;bottom:2rem;right:2.2rem;z-index:2;color:#fff}
+.panel-img .cap small{font-family:Poppins;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde-2);font-weight:600}
+.panel-img .cap h3{color:#fff;font-size:clamp(1.6rem,2.6vw,2.2rem);margin-top:.4rem}
+.panel-body{padding:2.8rem}
+.panel-body>p{color:var(--gris);margin-bottom:1.6rem}
+.svc{display:grid;grid-template-columns:52px 1fr;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--linea)}
+.svc .k{font-family:Poppins;font-weight:700;color:var(--azul);font-size:.95rem}
+.svc h4{font-size:1.1rem;margin-bottom:.3rem}
+.svc p{color:var(--gris);font-size:.94rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.chips span{font-size:.76rem;background:var(--fondo);color:var(--navy-3);padding:.3rem .7rem;border-radius:999px;font-weight:500}
+.exp{margin-top:1.4rem;background:linear-gradient(90deg,rgba(91,163,59,.12),rgba(91,163,59,.02));border-left:3px solid var(--verde);padding:1rem 1.2rem;border-radius:0 12px 12px 0;font-size:.9rem;color:var(--navy-3)}
+.exp b{font-family:Poppins;font-size:.7rem;letter-spacing:.16em;color:var(--verde);display:block;margin-bottom:.2rem}
+
+/* ===== GALERÍA ===== */
+.galeria{padding:0;background:var(--fondo);overflow:hidden}
+.track{display:flex;gap:18px;width:max-content;animation:marquee 60s linear infinite;padding:0 0 120px}
+.galeria:hover .track{animation-play-state:paused}
+.track figure{width:340px;height:240px;border-radius:18px;overflow:hidden;flex:0 0 auto;position:relative}
+.track figure:nth-child(odd){height:280px;margin-top:-20px}
+.track img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.track figure:hover img{transform:scale(1.08)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ===== PROCESO ===== */
+.proceso-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;position:relative;margin-top:3.6rem}
+.proceso-grid::before{content:"";position:absolute;top:32px;left:32px;right:12%;height:2px;background:linear-gradient(90deg,var(--navy),var(--azul),var(--verde))}
+.paso .dot{width:64px;height:64px;border-radius:50%;background:#fff;border:2px solid var(--navy);display:grid;place-items:center;font-family:Poppins;font-weight:700;color:var(--navy);position:relative;z-index:1;margin-bottom:1.5rem;transition:.3s}
+.paso:nth-child(2) .dot{border-color:var(--navy-3)}.paso:nth-child(3) .dot{border-color:var(--azul);color:var(--azul)}
+.paso:nth-child(4) .dot{background:var(--verde);border-color:var(--verde);color:#fff}
+.paso:hover .dot{transform:scale(1.08)}
+.paso h3{font-size:1.18rem;margin-bottom:.5rem}
+.paso p{color:var(--gris);font-size:.96rem}
+.interlocutor{margin-top:3.4rem;display:flex;align-items:center;gap:1rem;background:var(--fondo);border-radius:16px;padding:1.3rem 1.6rem;font-weight:500;color:var(--navy)}
+.interlocutor svg{flex:0 0 auto;color:var(--verde)}
+
+/* ===== LÍNEAS ===== */
+.lineas{color:#fff;overflow:hidden;padding:140px 0}
+.lineas-bg{position:absolute;inset:-22% 0;background:url(assets/paramo.webp) center/cover;will-change:transform}
+.lineas::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,28,53,.94) 0%,rgba(13,28,53,.75) 45%,rgba(13,28,53,.25) 100%)}
+.lineas .wrap{position:relative;z-index:2}
+.lineas h2{color:#fff}
+.lineas .lead{color:rgba(255,255,255,.8)}
+.lin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.4rem;max-width:980px}
+.lin{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);border-radius:var(--r);padding:2rem;transition:.35s var(--ease)}
+.lin:hover{background:rgba(255,255,255,.14);transform:translateY(-6px)}
+.lin .bar{width:40px;height:4px;border-radius:4px;margin-bottom:1.3rem}
+.lin h3{color:#fff;font-size:1.22rem;margin-bottom:.5rem}
+.lin p{color:rgba(255,255,255,.75);font-size:.95rem}
+
+/* ===== EXPERIENCIA ===== */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:3.2rem 0 2.2rem}
+.kpi{border-radius:var(--r);padding:1.8rem;background:var(--fondo);border-top:4px solid var(--navy)}
+.kpi:nth-child(2){border-color:var(--verde)}.kpi:nth-child(3){border-color:var(--azul)}.kpi:nth-child(4){border-color:var(--navy-3)}
+.kpi b{display:block;font-family:Poppins;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.05}
+.kpi b small{font-size:.5em;font-weight:600}
+.kpi>span{color:var(--gris);font-size:.9rem}
+.proys{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.proy{border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;background:#fff;transition:.35s var(--ease)}
+.proy:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(20,41,74,.5)}
+.proy .im{height:170px;overflow:hidden}
+.proy .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.proy:hover .im img{transform:scale(1.07)}
+.proy .bd{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.tags{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem;gap:.5rem}
+.sector{font-family:Poppins;font-size:.64rem;letter-spacing:.12em;font-weight:600;padding:.25rem .55rem;border-radius:6px;background:rgba(46,134,193,.12);color:var(--azul)}
+.sector.priv{background:rgba(91,163,59,.14);color:#3F7F24}
+.estado{font-size:.74rem;color:var(--gris);display:flex;align-items:center;gap:.35rem}
+.estado::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 3px rgba(91,163,59,.2)}
+.estado.fin::before{background:#9AA5B4;box-shadow:none}
+.proy h3{font-size:1.06rem;margin-bottom:.15rem}
+.proy .ref{font-size:.78rem;color:var(--gris);margin-bottom:.7rem}
+.proy p{font-size:.88rem;color:var(--gris);flex:1}
+.proy .val{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--linea);display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+.proy .val b{font-family:Poppins;color:var(--navy);font-size:1.02rem}
+.proy .val small{font-size:.72rem;color:var(--gris);text-align:right}
+.corte{font-size:.8rem;color:var(--gris);margin-top:1.2rem}
+
+/* ===== VALOR ===== */
+.valor{background:var(--navy-2);color:#fff;overflow:hidden}
+.valor::before{content:"";position:absolute;left:-180px;bottom:-240px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(91,163,59,.28),transparent 65%)}
+.valor h2{color:#fff}.valor .lead{color:rgba(255,255,255,.72)}
+.matriz{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.4rem;position:relative}
+.mcol{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:2rem;transition:.35s}
+.mcol:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.25)}
+.mcol h3{color:#fff;font-size:1.25rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:.7rem}
+.mcol h3 i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.mrow{padding:1rem 0;border-top:1px solid rgba(255,255,255,.1)}
+.mrow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.2rem;font-weight:600}
+.mrow span{font-weight:500}
+
+/* ===== IDENTIDAD ===== */
+.ident-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:1.6rem;margin-top:3rem}
+.ficha{border:1px solid var(--linea);border-radius:24px;padding:2.4rem}
+.ficha h3{font-size:1.25rem}
+.ficha .razon{color:var(--verde);font-family:Poppins;font-weight:600;margin-bottom:1.6rem}
+.datos{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2rem;padding-bottom:1.6rem;border-bottom:1px solid var(--linea);margin-bottom:1.6rem}
+.datos small{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);font-weight:600}
+.datos b{font-family:Poppins;color:var(--navy);font-size:1.05rem}
+.datos span{display:block;font-size:.84rem;color:var(--gris)}
+.habil small{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);font-weight:600;margin-bottom:.8rem}
+.habil .chips span{font-size:.82rem;padding:.45rem .85rem;background:var(--fondo)}
+.capacidad{background:linear-gradient(160deg,var(--navy),var(--navy-3));color:#fff;border-radius:24px;padding:2.4rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;position:relative;overflow:hidden}
+.capacidad::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:40px solid rgba(255,255,255,.05)}
+.capacidad small{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--verde-2);font-weight:600}
+.capacidad .big{font-family:Poppins;font-size:clamp(2.6rem,5vw,3.8rem);font-weight:700;line-height:1}
+.capacidad p{color:rgba(255,255,255,.75);font-size:.95rem}
+.rep{display:grid;gap:.9rem;position:relative;z-index:1}
+.rep div b{display:block;font-family:Poppins}
+.rep div span{font-size:.85rem;color:rgba(255,255,255,.65)}
+
+/* ===== ALIADOS ===== */
+.aliados{background:var(--fondo)}
+.al-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem}
+.razones{margin-top:2.4rem;display:grid}
+.razon{display:grid;grid-template-columns:56px 1fr;padding:1.3rem 0;border-top:1px solid var(--linea);font-weight:500;color:var(--navy);font-size:1.05rem}
+.razon:last-child{border-bottom:1px solid var(--linea)}
+.razon b{font-family:Poppins;color:var(--verde)}
+.vinc{display:grid;gap:1rem}
+.vc{background:#fff;border-radius:var(--r);padding:1.8rem 2rem;border-left:4px solid var(--verde);display:grid;grid-template-columns:auto 1fr;gap:1.3rem;align-items:start;transition:.35s var(--ease)}
+.vc:nth-child(2){border-color:var(--azul)}.vc:nth-child(3){border-color:var(--navy)}
+.vc:hover{transform:translateX(6px);box-shadow:0 20px 40px -28px rgba(20,41,74,.5)}
+.vc .ic{width:48px;height:48px;border-radius:12px;background:var(--fondo);display:grid;place-items:center;color:var(--navy)}
+.vc h3{font-size:1.18rem;margin-bottom:.3rem}
+.vc p{color:var(--gris);font-size:.95rem}
+
+/* ===== CONTACTO ===== */
+.contacto{padding:0;background:var(--navy-2);color:#fff;overflow:hidden}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.ct-img{position:relative;background:url(assets/bosque.webp) center/cover}
+.ct-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,28,53,.2),rgba(13,28,53,.85))}
+.ct-img blockquote{position:absolute;left:3rem;right:3rem;bottom:3rem;z-index:2;font-family:Poppins;font-weight:700;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.15;color:#fff}
+.ct-img blockquote em{font-style:normal;color:var(--verde-2)}
+.ct-body{padding:100px 4rem 90px}
+.ct-body h2{color:#fff}
+.ct-body .lead{color:rgba(255,255,255,.75);margin-bottom:2.2rem}
+.persona{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:center;padding:1.3rem 0;border-top:1px solid rgba(255,255,255,.12)}
+.persona .av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--verde),var(--azul));display:grid;place-items:center;font-family:Poppins;font-weight:700}
+.persona b{font-family:Poppins;display:block}
+.persona small{color:var(--verde-2);font-weight:600;font-size:.8rem}
+.persona .links{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:.3rem;font-size:.9rem}
+.persona .links a{text-decoration:none;color:rgba(255,255,255,.8)}
+.persona .links a:hover{color:#fff;text-decoration:underline}
+.dir{display:flex;gap:.8rem;align-items:flex-start;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.75);font-size:.95rem}
+.ct-body .ctas{margin-top:2.2rem}
+
+footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.86rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.foot img{height:56px;width:auto}
+.foot nav{display:flex;gap:1.4rem;flex-wrap:wrap}
+.foot nav a{text-decoration:none}.foot nav a:hover{color:#fff}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:transform .25s}
+.wa:hover{transform:scale(1.08)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1060px){
+  .proys,.kpis{grid-template-columns:1fr 1fr}
+  .panel{grid-template-columns:1fr}
+  .panel-img{min-height:300px}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;inset:0;background:var(--navy-2);flex-direction:column;justify-content:center;gap:1.6rem;transform:translateY(-100%);transition:transform .5s var(--ease);z-index:-1}
+  body.menu-open .menu{transform:none}
+  .menu a,header.solid .menu a{color:#fff;font-size:1.3rem;font-family:Poppins}
+  body.menu-open header .burger span{background:#fff}
+  body.menu-open .logo .l-blanco{display:block}body.menu-open .logo .l-color{display:none}
+  .hero-stats .wrap{grid-template-columns:1fr 1fr}
+  .hs:nth-child(3){border-left:0;padding-left:0}
+  .hs{border-top:1px solid rgba(255,255,255,.12)}
+  .hs:nth-child(-n+2){border-top:0}
+  .scroll-cue{display:none}
+  .ctx-grid,.rol-top,.al-grid,.ident-grid,.ct-grid{grid-template-columns:1fr;gap:2.4rem}
+  .hub{grid-template-columns:1fr;padding-top:0}
+  .hub-core,.hub-lines{display:none}
+  .proceso-grid{grid-template-columns:1fr 1fr}
+  .proceso-grid::before{display:none}
+  .lin-grid,.matriz{grid-template-columns:1fr}
+  .ct-img{min-height:420px}
+  .ct-body{padding:70px 28px}
+  section{padding:90px 0}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .proys,.kpis,.proceso-grid{grid-template-columns:1fr}
+  .datos{grid-template-columns:1fr}
+  .tabs{width:100%;overflow-x:auto}
+  .tab{white-space:nowrap;padding:.7rem 1rem}
+  .panel-body{padding:2rem 1.5rem}
+  .track figure{width:260px;height:190px}.track figure:nth-child(odd){height:220px}
+  .hs{padding:1.2rem 1rem}
+  .hero-in{padding-top:130px}
+  .logo img{height:46px}
+  .ct-img blockquote{left:1.6rem;right:1.6rem;bottom:1.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="FODESA, inicio">
+      <img class="l-blanco" src="assets/logo-blanco.png" alt="FODESA">
+      <img class="l-color" src="assets/logo.png" alt="FODESA">
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#rol">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Cómo trabajamos</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#aliados">Aliados</a></li>
+      <li><a href="#contacto" class="btn btn-verde">Contáctenos</a></li>
+    </ul>
+    <button class="burger" aria-label="Menú" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio" style="padding:0">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Fondo para el Desarrollo Sostenible Ambiental</span>
+    <h1>Articulamos soluciones <span class="g">sostenibles</span> desde el territorio.</h1>
+    <p>Pasamos del discurso ambiental a la gestión de proyectos y la inversión con propósito.</p>
+    <div class="ctas">
+      <a href="#servicios" class="btn btn-verde">Conozca nuestros servicios <span class="arrow">→</span></a>
+      <a href="#contacto" class="btn btn-vidrio">Hablemos de su proyecto</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="wrap">
+      <div class="hs"><b>$<span class="count" data-to="788" data-dec="0">0</span> M</b><span>gestionados en 2026</span></div>
+      <div class="hs"><b><span class="count" data-to="4">0</span></b><span>proyectos contratados</span></div>
+      <div class="hs"><b><span class="count" data-to="3">0</span></b><span>proyectos en ejecución</span></div>
+      <div class="hs"><b><span class="count" data-to="1000" data-sep="1">0</span> SMMLV</b><span>capacidad de contratación</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Descubra</div>
+</section>
+
+<!-- CONTEXTO -->
+<section class="contexto">
+  <div class="wrap ctx-grid">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--verde-2)">El contexto</span>
+      <h2 class="h2">La demanda de acción real</h2>
+      <p class="lead">Empresas y gobiernos territoriales necesitan pasar de los compromisos a resultados medibles en el territorio.</p>
+    </div>
+    <div class="ctx-list">
+      <div class="ctx rv"><span class="n">01</span><div><h3>Cambio climático</h3><p>Una coyuntura que exige pasar de la teoría a la mitigación y la adaptación medibles en el territorio.</p></div></div>
+      <div class="ctx rv d1"><span class="n">02</span><div><h3>Presión regulatoria</h3><p>Mayores exigencias normativas para empresas y entidades territoriales en materia ambiental y de compensación.</p></div></div>
+      <div class="ctx rv d2"><span class="n">03</span><div><h3>Inversión con propósito</h3><p>Necesidad de canalizar capital hacia proyectos con trazabilidad, impacto en la población y resultados verificables.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROL -->
+<section id="rol">
+  <div class="wrap">
+    <div class="rol-top">
+      <div class="rv">
+        <span class="eyebrow">Nuestro rol</span>
+        <h2 class="h2">El enlace estratégico y operativo</h2>
+      </div>
+      <p class="lead rv d1">FODESA es una <strong style="color:var(--navy)">empresa de economía mixta de mayoría pública</strong> que actúa como puente técnico, financiero y operativo para estructurar y ejecutar soluciones sostenibles.</p>
+    </div>
+    <div class="hub">
+      <div class="hub-lines" aria-hidden="true"></div>
+      <div class="hub-core">FODESA</div>
+      <article class="aud rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Autoridades ambientales</h3>
+        <p>Rigor técnico y cumplimiento normativo en cada intervención.</p>
+      </article>
+      <article class="aud rv d1">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+        <h3>Gobiernos territoriales</h3>
+        <p>Una entidad idónea, con anclaje real en las regiones, habilitada para convenios interadministrativos.</p>
+      </article>
+      <article class="aud rv d2">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Empresas y cooperación</h3>
+        <p>Alianzas estratégicas con estándares de transparencia y reporte de impacto.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+  <div class="wrap">
+    <div class="serv-head">
+      <div class="rv">
+        <span class="eyebrow">Portafolio de servicios</span>
+        <h2 class="h2" style="margin-bottom:0">Ecosistema de soluciones sostenibles</h2>
+      </div>
+      <div class="tabs rv d1" role="tablist">
+        <button class="tab on" data-t="0" role="tab">Conservación</button>
+        <button class="tab" data-t="1" role="tab">Desarrollo social</button>
+        <button class="tab" data-t="2" role="tab">Innovación</button>
+      </div>
+    </div>
+
+    <div class="panel on" data-p="0">
+      <div class="panel-img" style="background-image:url(assets/pilar1.webp)"><div class="cap"><small>Pilar 1</small><h3>Conservación y entorno físico</h3></div></div>
+      <div class="panel-body">
+        <p>Intervenciones en campo que protegen el agua, restauran ecosistemas y reducen la huella de los territorios.</p>
+        <div class="svc"><span class="k">1.1</span><div><h4>Reforestación y protección de microcuencas</h4><p>Restauración ecológica, siembra de especies nativas y protección de fuentes hídricas, orientadas a la seguridad hídrica, la captura de carbono y las metas de compensación ambiental.</p></div></div>
+        <div class="svc"><span class="k">1.2</span><div><h4>Transición y eficiencia energética</h4><p>Sistemas fotovoltaicos, diagnósticos de eficiencia y proyectos de energía comunitaria con esquemas de financiación verde.</p></div></div>
+        <div class="svc"><span class="k">1.3</span><div><h4>Economía circular e innovación</h4><p>Modelos que convierten residuos en oportunidades: cadenas de valor verdes, reciclaje y parques ecoindustriales.</p></div></div>
+        <div class="exp"><b>EXPERIENCIA FODESA</b>Restauración ecológica del Predio Normandía 2 · Gobernación de Caldas, 2026.</div>
+      </div>
+    </div>
+
+    <div class="panel" data-p="1">
+      <div class="panel-img" style="background-image:url(assets/pilar2.webp)"><div class="cap"><small>Pilar 2</small><h3>Desarrollo social y económico</h3></div></div>
+      <div class="panel-body">
+        <p>La sostenibilidad se construye con las comunidades: oportunidades económicas, participación y confianza institucional.</p>
+        <div class="svc"><span class="k">2.1</span><div><h4>Turismo regenerativo y sostenible</h4><p>El turismo como herramienta de conservación e inclusión. Estructuramos productos con identidad territorial y oportunidad económica.</p><div class="chips"><span>Rutas ecoturísticas y culturales</span><span>Planes de carbono neutralidad</span><span>Gestión de recursos con FONTUR</span></div></div></div>
+        <div class="svc"><span class="k">2.2</span><div><h4>Gobernanza y justicia ambiental</h4><p>Fortalecemos las capacidades institucionales y la participación ciudadana en las decisiones sobre el territorio.</p><div class="chips"><span>Formación para funcionarios y líderes</span><span>Pilotos de justicia restaurativa</span><span>Mecanismos de participación</span></div></div></div>
+        <div class="exp"><b>EXPERIENCIA FODESA</b>Ruta del Oro de Caldas: talleres comunitarios y producto turístico patrimonial en Marmato, Supía y Riosucio.</div>
+      </div>
+    </div>
+
+    <div class="panel" data-p="2">
+      <div class="panel-img" style="background-image:url(assets/pilar3.webp)"><div class="cap"><small>Pilar 3</small><h3>Innovación y cultura territorial</h3></div></div>
+      <div class="panel-body">
+        <p>Tecnología, contenidos y encuentros que hacen visible la sostenibilidad y conectan a los actores del territorio.</p>
+        <div class="svc"><span class="k">3.1</span><div><h4>Implementación tecnológica</h4><p>Herramientas digitales para la gestión, la planificación y el monitoreo ambiental de los territorios.</p></div></div>
+        <div class="svc"><span class="k">3.2</span><div><h4>Producción creativa y contenidos</h4><p>Libros, documentales, podcasts y campañas multicanal que narran el territorio y visibilizan la sostenibilidad.</p></div></div>
+        <div class="svc"><span class="k">3.3</span><div><h4>Eventos para el desarrollo sostenible</h4><p>Diseño y operación de foros, congresos y encuentros comunitarios que articulan cultura, tecnología y cooperación.</p></div></div>
+        <div class="exp"><b>EXPERIENCIA FODESA</b>Foro Diversidad «Territorios que nos unen» · Concejo de Manizales, 2026. Libro y micrositio de la Ruta del Oro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria" aria-label="Galería">
+  <div class="track" id="track">
+    <figure><img src="assets/nevado-cafe.webp" alt="Paisaje cafetero con nevado"></figure>
+    <figure><img src="assets/oso.webp" alt="Oso de anteojos en el bosque andino"></figure>
+    <figure><img src="assets/monitoreo.webp" alt="Monitoreo de calidad del agua"></figure>
+    <figure><img src="assets/frailejones.webp" alt="Páramo con frailejones"></figure>
+    <figure><img src="assets/comunidad.webp" alt="Diálogo comunitario"></figure>
+    <figure><img src="assets/solar.webp" alt="Energía solar en las montañas"></figure>
+    <figure><img src="assets/marmato.webp" alt="Patrimonio minero de Marmato"></figure>
+    <figure><img src="assets/cascada.webp" alt="Fuente hídrica en el bosque"></figure>
+    <figure><img src="assets/laboratorio.webp" alt="Investigación ambiental"></figure>
+    <figure><img src="assets/senderismo.webp" alt="Turismo de naturaleza"></figure>
+    <figure><img src="assets/reciclaje.webp" alt="Economía circular y reciclaje"></figure>
+    <figure><img src="assets/foro.webp" alt="Foro para el desarrollo sostenible"></figure>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 class="h2">Plataforma operativa: proyectos llave en mano</h2>
+    </div>
+    <div class="proceso-grid">
+      <div class="paso rv"><div class="dot">01</div><h3>Estructuración técnico-financiera</h3><p>Diseño de proyectos verdes adaptados a las condiciones sociales y ambientales de cada región.</p></div>
+      <div class="paso rv d1"><div class="dot">02</div><h3>Alianzas y financiación</h3><p>Acceso a financiación complementaria y esquemas de inversión ambiental corporativa.</p></div>
+      <div class="paso rv d2"><div class="dot">03</div><h3>Ejecución territorial</h3><p>Operación directa en campo con anclaje territorial, eficiencia y gobernanza local.</p></div>
+      <div class="paso rv d3"><div class="dot">04</div><h3>Reporte y trazabilidad</h3><p>Métricas de impacto, cumplimiento ESG y gestión de certificaciones o beneficios fiscales.</p></div>
+    </div>
+    <div class="interlocutor rv">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+      Un solo interlocutor acompaña el proyecto desde la idea hasta el informe final de impacto.
+    </div>
+  </div>
+</section>
+
+<!-- LÍNEAS -->
+<section class="lineas">
+  <div class="lineas-bg" id="parallax" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv" style="max-width:680px">
+      <span class="eyebrow" style="color:var(--verde-2)">Enfoque</span>
+      <h2 class="h2">Líneas estratégicas de impacto</h2>
+      <p class="lead">Cada proyecto responde a una visión de largo plazo, con impacto medible en recursos, regiones, aliados y replicabilidad.</p>
+    </div>
+    <div class="lin-grid">
+      <div class="lin rv"><div class="bar" style="background:var(--verde)"></div><h3>Restauración y conservación</h3><p>Ecosistemas estratégicos, páramos, humedales y corredores biológicos.</p></div>
+      <div class="lin rv d1"><div class="bar" style="background:var(--azul-2)"></div><h3>Gobernanza del agua</h3><p>Protección de cuencas abastecedoras y gestión integral del recurso hídrico.</p></div>
+      <div class="lin rv d2"><div class="bar" style="background:#fff"></div><h3>Ecoturismo y biodiversidad</h3><p>Economías locales que dependen de conservar el territorio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Trayectoria verificable</span>
+      <h2 class="h2">Experiencia acumulada</h2>
+    </div>
+    <div class="kpis">
+      <div class="kpi rv"><b>$<span class="count" data-to="788">0</span>,0 <small>millones</small></b><span>Valor gestionado en contratos, convenios y apoyos (antes de IVA)</span></div>
+      <div class="kpi rv d1"><b><span class="count" data-to="4">0</span></b><span>Proyectos contratados y gestionados en 2026</span></div>
+      <div class="kpi rv d2"><b style="font-size:clamp(1.4rem,2.2vw,1.9rem)">Público + Privado</b><span>Entidades territoriales y sector empresarial</span></div>
+      <div class="kpi rv d3"><b><span class="count" data-to="3">0</span></b><span>Proyectos en ejecución a noviembre de 2026</span></div>
+    </div>
+    <div class="proys">
+      <article class="proy rv">
+        <div class="im"><img src="assets/foro.webp" alt="" loading="lazy"></div>
+        <div class="bd">
+          <div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado">En ejecución</span></div>
+          <h3>Concejo de Manizales</h3><div class="ref">Foro Diversidad · Territorios que nos unen</div>
+          <p>Diseño y operación del foro sobre diversidad como motor de desarrollo, neurodiversidad y diversidad étnica, con conferencistas nacionales. Teatro Fundadores, 3 de diciembre de 2026.</p>
+          <div class="val"><b>$90.000.000</b><small>Total de apoyos</small></div>
+        </div>
+      </article>
+      <article class="proy rv d1">
+        <div class="im"><img src="assets/cascada.webp" alt="" loading="lazy"></div>
+        <div class="bd">
+          <div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado">En ejecución</span></div>
+          <h3>Gobernación de Caldas</h3><div class="ref">Secretaría de Medio Ambiente · Convenio Interadministrativo 2026-2041</div>
+          <p>Cooperación interadministrativa con la autoridad departamental en la gestión ambiental del territorio caldense.</p>
+          <div class="val"><b>$282.376.078</b><small>Vigente hasta 30/12/2026</small></div>
+        </div>
+      </article>
+      <article class="proy rv d2">
+        <div class="im"><img src="assets/marmato.webp" alt="" loading="lazy"></div>
+        <div class="bd">
+          <div class="tags"><span class="sector priv">SECTOR PRIVADO</span><span class="estado">En ejecución</span></div>
+          <h3>Fundación Aris Mining</h3><div class="ref">Contrato FAM 373 de 2026</div>
+          <p>Laboratorio Territorial Paisaje Cultural Minero Vivo – Ruta del Oro de Caldas: atlas patrimonial, guiones interpretativos, talleres comunitarios, libro y micrositio en Marmato, Supía y Riosucio.</p>
+          <div class="val"><b>$300.000.000 <small style="font-size:.7rem">+ IVA</small></b><small>Plazo 6 meses</small></div>
+        </div>
+      </article>
+      <article class="proy rv d3">
+        <div class="im"><img src="assets/pilar1.webp" alt="" loading="lazy"></div>
+        <div class="bd">
+          <div class="tags"><span class="sector">SECTOR PÚBLICO</span><span class="estado fin">Terminado</span></div>
+          <h3>Gobernación de Caldas</h3><div class="ref">Contrato Interadministrativo 2026-1036</div>
+          <p>Restauración ecológica del Predio Normandía 2, orientada a la protección de ecosistemas estratégicos y fuentes hídricas.</p>
+          <div class="val"><b>$115.579.181</b><small>Terminado 30/06/2026</small></div>
+        </div>
+      </article>
+    </div>
+    <p class="corte">Corte: noviembre de 2026 · Cifras en pesos colombianos.</p>
+  </div>
+</section>
+
+<!-- VALOR -->
+<section class="valor">
+  <div class="wrap">
+    <div class="rv" style="max-width:720px">
+      <span class="eyebrow" style="color:var(--verde-2)">Propuesta de valor</span>
+      <h2 class="h2">Matriz de valor institucional</h2>
+      <p class="lead">Lo que cada aliado gana al trabajar con FODESA.</p>
+    </div>
+    <div class="matriz">
+      <div class="mcol rv"><h3><i style="background:var(--verde)"></i>Empresas</h3>
+        <div class="mrow"><small>Financiación y beneficios fiscales</small><span>Beneficios fiscales (CoCrea, OxI, OxR)</span></div>
+        <div class="mrow"><small>Trazabilidad y ESG</small><span>Reportes de sostenibilidad</span></div>
+        <div class="mrow"><small>Capacidad operativa</small><span>Proyectos llave en mano</span></div>
+      </div>
+      <div class="mcol rv d1"><h3><i style="background:var(--azul-2)"></i>Gobiernos locales y CAR</h3>
+        <div class="mrow"><small>Financiación y beneficios fiscales</small><span>Acceso a cofinanciación</span></div>
+        <div class="mrow"><small>Trazabilidad y ESG</small><span>Transparencia pública</span></div>
+        <div class="mrow"><small>Capacidad operativa</small><span>Ejecución territorial idónea</span></div>
+      </div>
+      <div class="mcol rv d2"><h3><i style="background:#fff"></i>Cooperación y multilaterales</h3>
+        <div class="mrow"><small>Financiación y beneficios fiscales</small><span>Eficiencia del capital</span></div>
+        <div class="mrow"><small>Trazabilidad y ESG</small><span>Indicadores medibles</span></div>
+        <div class="mrow"><small>Capacidad operativa</small><span>Escalabilidad comprobada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDENTIDAD -->
+<section id="identidad">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Identidad institucional</span>
+      <h2 class="h2">Naturaleza y gobierno corporativo</h2>
+    </div>
+    <div class="ident-grid">
+      <div class="ficha rv">
+        <h3>Empresa Mixta Fondo para el Desarrollo Sostenible Ambiental S.A.S.</h3>
+        <div class="razon">FODESACOL</div>
+        <div class="datos">
+          <div><small>Naturaleza jurídica</small><b>Sociedad de economía mixta</b><span>De mayoría pública · Duración indefinida</span></div>
+          <div><small>NIT</small><b>901.966.569-2</b><span>Matrícula mercantil 246313 · CCMPC</span></div>
+          <div><small>Constitución</small><b>10 de julio de 2025</b><span>Inscrita el 15 de julio de 2025</span></div>
+          <div><small>Domicilio</small><b>Manizales, Caldas</b><span>Ed. Pranha Empresarial, Of. 903 · El Cable</span></div>
+        </div>
+        <div class="habil">
+          <small>Habilitada por su objeto social para</small>
+          <div class="chips">
+            <span>Convenios y contratos interadministrativos</span>
+            <span>Ejecución y operación de recursos SGR</span>
+            <span>Pago por servicios ambientales y compensaciones</span>
+            <span>Gerencia, interventoría y supervisión</span>
+            <span>Operación de parques tecnológicos y centros de innovación</span>
+            <span>Cooperación nacional e internacional</span>
+          </div>
+        </div>
+      </div>
+      <div class="capacidad rv d1">
+        <div>
+          <small>Capacidad de contratación</small>
+          <div class="big" style="margin:.6rem 0 .6rem"><span class="count" data-to="1000" data-sep="1">0</span> SMMLV</div>
+          <p>De la representación legal. Junta Directiva de cinco miembros principales, delegados institucionales de las entidades accionistas, con el Municipio de Marulanda como socio mayoritario.</p>
+        </div>
+        <div class="rep">
+          <div><b>Adriana Cardona Escobar</b><span>Representante Legal</span></div>
+          <div><b>Jhonatan Stiven Tamayo Ortiz</b><span>Representante Legal Suplente</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALIADOS -->
+<section class="aliados" id="aliados">
+  <div class="wrap al-grid">
+    <div class="rv">
+      <span class="eyebrow">Inversión institucional</span>
+      <h2 class="h2">¿Por qué confiar en FODESA?</h2>
+      <div class="razones">
+        <div class="razon"><b>01</b>Capacidad técnica multisectorial.</div>
+        <div class="razon"><b>02</b>Mecanismos de inversión y ejecución confiables y transparentes.</div>
+        <div class="razon"><b>03</b>Proyectos con retorno reputacional y beneficio fiscal comprobable.</div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow rv">Para aliados</span>
+      <h2 class="h2 rv" style="font-size:clamp(1.6rem,2.8vw,2.2rem)">Formas de vinculación</h2>
+      <div class="vinc">
+        <div class="vc rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3>Cofinanciación</h3><p>Multiplicamos el impacto de proyectos existentes con recursos complementarios.</p></div></div>
+        <div class="vc rv d1"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V12M12 12C12 7 8 4 3 3c0 6 4 9 9 9zM12 12c0-5 4-8 9-9 0 6-4 9-9 9z"/></svg></div><div><h3>Proyectos a medida</h3><p>Estructuración desde cero según las necesidades ESG de cada organización.</p></div></div>
+        <div class="vc rv d2"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><div><h3>Patrocinios</h3><p>Visibilidad corporativa en territorios y eventos estratégicos.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <div class="ct-grid">
+    <div class="ct-img"><blockquote class="rv">“Invertir en sostenibilidad es <em>sembrar futuro.</em>”</blockquote></div>
+    <div class="ct-body">
+      <span class="eyebrow" style="color:var(--verde-2)">Contacto</span>
+      <h2 class="h2">Hablemos de su proyecto</h2>
+      <p class="lead">Cuéntenos su reto ambiental o territorial. Le ayudamos a estructurarlo y a encontrar la figura adecuada para ejecutarlo.</p>
+      <div class="persona">
+        <div class="av">AC</div>
+        <div><b>Adriana Cardona Escobar</b><small>Representante Legal</small>
+          <div class="links"><a href="tel:+573122883749">+57 312 288 3749</a><a href="mailto:direccion@fodesa.com.co">direccion@fodesa.com.co</a></div></div>
+      </div>
+      <div class="persona">
+        <div class="av">JT</div>
+        <div><b>Jhonatan Tamayo</b><small>Gerente Técnico</small>
+          <div class="links"><a href="tel:+573225815577">+57 322 581 5577</a><a href="mailto:dirtecnico@fodesa.com.co">dirtecnico@fodesa.com.co</a></div></div>
+      </div>
+      <div class="dir">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:0 0 auto;margin-top:2px"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span>Cra. 23C # 62-72, Ed. Pranha Empresarial, Of. 903 · Manizales, Caldas</span>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-verde" href="mailto:direccion@fodesa.com.co?subject=Quiero%20conversar%20sobre%20un%20proyecto">Escríbanos <span class="arrow">→</span></a>
+        <a class="btn btn-vidrio" href="https://wa.me/573122883749?text=Hola%20FODESA%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <img src="assets/logo-blanco.png" alt="FODESA">
+    <nav><a href="#rol">Nosotros</a><a href="#servicios">Servicios</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a></nav>
+    <span>© <span id="y"></span> FODESA · NIT 901.966.569-2</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/573122883749?text=Hola%20FODESA%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1.1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.2 5.1 16 5.1s10.6 4.7 10.6 10.5S21.8 26 16 26zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+(function(){
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const header=document.getElementById('top');
+  const onScroll=()=>{header.classList.toggle('solid',scrollY>40);
+    const p=document.getElementById('parallax');
+    if(p){const r=p.parentElement.getBoundingClientRect();const off=Math.max(-160,Math.min(160,(r.top+r.height/2-innerHeight/2)*-0.12));p.style.transform='translateY('+off+'px)';}};
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // menú móvil
+  document.querySelector('.burger').addEventListener('click',()=>document.body.classList.toggle('menu-open'));
+  document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+
+  // tabs de servicios
+  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+    t.classList.add('on');document.querySelector('.panel[data-p="'+t.dataset.t+'"]').classList.add('on');
+  }));
+
+  // galería infinita
+  const tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
+  tr.querySelectorAll('figure').forEach((f,i)=>{if(i>=12)f.setAttribute('aria-hidden','true')});
+
+  // contadores
+  const fmt=(n,sep)=>sep?n.toLocaleString('es-CO'):String(n);
+  const count=el=>{const to=+el.dataset.to,sep=el.dataset.sep,t0=performance.now(),d=1600;
+    const step=t=>{const k=Math.min((t-t0)/d,1),e=1-Math.pow(1-k,3);el.textContent=fmt(Math.round(to*e),sep);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)};
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
+    e.target.classList.add('in');e.target.querySelectorAll?.('.count').forEach(count);
+    if(e.target.classList.contains('count'))count(e.target);io.unobserve(e.target)}),{threshold:.15});
+  document.querySelectorAll('.rv,.hero-stats .count').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
