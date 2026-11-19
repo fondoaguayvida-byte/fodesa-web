@@ -165,6 +165,23 @@ section{padding:120px 0;position:relative}
 .interlocutor{margin-top:3.4rem;display:flex;align-items:center;gap:1rem;background:var(--fondo);border-radius:16px;padding:1.3rem 1.6rem;font-weight:500;color:var(--navy)}
 .interlocutor svg{flex:0 0 auto;color:var(--verde)}
 
+/* ===== CAMPO ===== */
+.campo{background:var(--navy-2);color:#fff;overflow:hidden}
+.campo h2{color:#fff}.campo .lead{color:rgba(255,255,255,.75)}
+.campo-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.mosaico{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:14px}
+.mosaico figure{position:relative;border-radius:18px;overflow:hidden;margin:0}
+.mosaico img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.mosaico figure:hover img{transform:scale(1.06)}
+.mosaico figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;font-size:.82rem;font-weight:500;background:linear-gradient(transparent,rgba(13,28,53,.85));opacity:0;transform:translateY(8px);transition:.4s var(--ease)}
+.mosaico figure:hover figcaption{opacity:1;transform:none}
+.m-wide{grid-column:span 2}.m-tall{grid-row:span 2}
+.campo-stats{display:flex;gap:2.4rem;flex-wrap:wrap}
+.campo-stats div b{display:block;font-family:Poppins;font-size:1.6rem;color:var(--verde-2)}
+.campo-stats div span{font-size:.85rem;color:rgba(255,255,255,.65)}
+@media(max-width:900px){.mosaico{grid-template-columns:1fr 1fr;grid-auto-rows:180px}}
+@media(max-width:600px){.mosaico figcaption{opacity:1;transform:none}}
+
 /* ===== LÍNEAS ===== */
 .lineas{color:#fff;overflow:hidden;padding:140px 0}
 .lineas-bg{position:absolute;inset:-22% 0;background:url(paramo.webp) center/cover;will-change:transform}
@@ -253,7 +270,7 @@ section{padding:120px 0;position:relative}
 .socios{grid-template-columns:repeat(5,1fr)}
 .socio{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:1.3rem 1rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.5rem;transition:.3s var(--ease)}
 .socio:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(20,41,74,.45)}
-.socio img{height:48px;width:auto}
+.socio img{height:76px;width:auto;max-width:100%;object-fit:contain}
 .socio b{font-family:Poppins;font-size:.86rem;color:var(--navy);line-height:1.25}
 .socio .pct{font-family:Poppins;font-weight:700;font-size:1.5rem;color:var(--verde);line-height:1}
 .socio.mayor{border:2px solid var(--verde);background:linear-gradient(180deg,rgba(91,163,59,.08),#fff)}
@@ -382,6 +399,7 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
       <li><a href="#rol">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#proceso">Cómo trabajamos</a></li>
+      <li><a href="#campo">En campo</a></li>
       <li><a href="#aliados">Aliados</a></li>
       <li><a href="#contacto" class="btn btn-verde">Contáctenos</a></li>
     </ul>
@@ -476,7 +494,7 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
     </div>
 
     <div class="panel on" data-p="0">
-      <div class="panel-img" style="background-image:url(pilar1.webp)"><div class="cap"><small>Pilar 1</small><h3>Conservación y entorno físico</h3></div></div>
+      <div class="panel-img" style="background-image:url(campo-drone.webp)"><div class="cap"><small>Pilar 1</small><h3>Conservación y entorno físico</h3></div></div>
       <div class="panel-body">
         <p>Intervenciones en campo que protegen el agua, restauran ecosistemas y reducen la huella de los territorios.</p>
         <div class="svc"><span class="k">1.1</span><div><h4>Reforestación y protección de microcuencas</h4><p>Restauración ecológica, siembra de especies nativas y protección de fuentes hídricas, orientadas a la seguridad hídrica, la captura de carbono y las metas de compensación ambiental.</p></div></div>
@@ -512,6 +530,10 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
 <!-- GALERÍA -->
 <section class="galeria" aria-label="Galería">
   <div class="track" id="track">
+    <figure><img src="campo-cerca-paramo.webp" alt="Aislamiento en zona de páramo"></figure>
+    <figure><img src="vivero-1.webp" alt="Vivero de especies nativas"></figure>
+    <figure><img src="campo-mulas.webp" alt="Transporte de postes a lomo de mula"></figure>
+    <figure><img src="campo-drone.webp" alt="Vista aérea de zona en restauración"></figure>
     <figure><img src="nevado-cafe.webp" alt="Paisaje cafetero con nevado"></figure>
     <figure><img src="oso.webp" alt="Oso de anteojos en el bosque andino"></figure>
     <figure><img src="monitoreo.webp" alt="Monitoreo de calidad del agua"></figure>
@@ -543,6 +565,32 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
     <div class="interlocutor rv">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
       Un solo interlocutor acompaña el proyecto desde la idea hasta el informe final de impacto.
+    </div>
+  </div>
+</section>
+
+<!-- CAMPO -->
+<section class="campo" id="campo">
+  <div class="wrap">
+    <div class="campo-head">
+      <div class="rv" style="max-width:640px">
+        <span class="eyebrow" style="color:var(--verde-2)">En el territorio</span>
+        <h2 class="h2">Así trabajamos en campo</h2>
+        <p class="lead">Aislamientos en páramo, viveros de especies nativas y logística en zonas de difícil acceso: el trabajo real detrás de cada proyecto.</p>
+      </div>
+    </div>
+    <div class="mosaico">
+      <figure class="m-wide m-tall rv"><img src="campo-drone.webp" alt="" loading="lazy"><figcaption>Vista aérea de un área en proceso de restauración</figcaption></figure>
+      <figure class="m-tall rv d1"><img src="campo-instalacion.webp" alt="" loading="lazy"><figcaption>Instalación de cercas de aislamiento</figcaption></figure>
+      <figure class="rv d2"><img src="vivero-1.webp" alt="" loading="lazy"><figcaption>Material vegetal de especies nativas</figcaption></figure>
+      <figure class="rv d2"><img src="vivero-3.webp" alt="" loading="lazy"><figcaption>Plántulas listas para siembra</figcaption></figure>
+      <figure class="m-tall rv"><img src="campo-mulas.webp" alt="" loading="lazy"><figcaption>Transporte de postes a lomo de mula</figcaption></figure>
+      <figure class="m-wide rv d1"><img src="campo-acceso.webp" alt="" loading="lazy"><figcaption>Cierre de accesos en zona de páramo</figcaption></figure>
+      <figure class="m-tall rv d2"><img src="campo-niebla.webp" alt="" loading="lazy"><figcaption>Aislamiento de ecosistemas de alta montaña</figcaption></figure>
+      <figure class="rv"><img src="campo-cerca-paramo.webp" alt="" loading="lazy"><figcaption>Protección de franjas de páramo junto a la vía</figcaption></figure>
+      <figure class="rv d1"><img src="vivero-2.webp" alt="" loading="lazy"><figcaption>Vivero de especies forestales</figcaption></figure>
+      <figure class="m-wide rv"><img src="campo-postes.webp" alt="" loading="lazy"><figcaption>Acopio de postes inmunizados</figcaption></figure>
+      <figure class="m-wide rv d1"><img src="campo-cerca-via.webp" alt="" loading="lazy" style="object-position:center 70%"><figcaption>Cercas de protección en corredores viales de alta montaña</figcaption></figure>
     </div>
   </div>
 </section>
@@ -641,11 +689,11 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
       <div class="gc"><span class="nivel">Asamblea General de Accionistas</span></div>
       <div class="barra" aria-hidden="true"><i style="width:52%;background:var(--verde)"></i><i style="width:12%;background:var(--azul)"></i><i style="width:12%;background:#3E7A3A"></i><i style="width:12%;background:#E8A33A"></i><i style="width:12%;background:var(--navy-3)"></i></div>
       <div class="socios">
-        <div class="socio mayor"><img src="data:image/webp;base64,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" alt=""><span class="pct">52 %</span><b>Municipio de Marulanda, Caldas</b></div>
-        <div class="socio"><img src="data:image/webp;base64,UklGRmwFAABXRUJQVlA4WAoAAAAQAAAAMwAALwAAQUxQSP8CAAABCTNt26iJtKv8CXcgIvo/Ado2dUM/Bny5JApDIJC0v/kEEZG6UNC2jZTxB73dlx6EiAmYADq3rR2T4BGd53nLY9u2jcg2MoezJlKoyJk9P8D2ZLZtT1vVpe99b9DVX73VETEBROheAOvtut9OO2yEVyrBQ6hUKiKpn2K/iLGxfBO8W5H89ON336XHqMbqgdbWyjxywCUnsDJpmA1bXZB8B2MFu1x1DaRkTrBheRvCqJ51cYvCK864m4Ktjt+MIlRZg41HY5cjGQRjDRq1W8H+W+LGGrUhxuYkY83GFQKSsVZFbwUfMV6pHAxAfLToGkcyRp1G/u/7LvInZ+J3VEb8hRUPM04Zz9/1u0rBn2Yv/W4pm+CHx/9c1ylt/OaL17rIrcC77x++CSrn6ee0zg3yTBLdl9mTwigtFv/XwaSQR85nH2sDZIzam+dMybMkG7z077rrkLPf3uBkjIyCr19pe8BGE/9294x4BlV473uqiZyJ97UlKUNi+u0FCiOr8xQtsv71IWEwIKt8+jM2zvLbND4gc2JilvVHErSnSLGdS7xAaKARjA41TGSWd+5HHaycM0O1VWmRO9nHv3iap7RMP5EUA9ltcAvGbDn6i9RS0SF79O9e90i3jFj8k/U3ps0478ZgIvkqhi8zu0SX/DF8+qBH+HECDZMHekvFDMpHcQMGTD5IXGFav4VgljGqcipEgNPDEPkOrFtnjjEaJ7QwANtqVglgHZaqzGHKZuywRzRWhs2u9mhiY2jTwciv+uYYQ9N9W7VJ7AqwEBmjhRbGcM1tcGOFHRuCqa4rm4iRstVbLsZaUaRo5JaYmKeseOq0h9oYGxrZU4V/fmdEb37zJdgPu/RqlkPRGbz1Dy1AEeDRy6BwH0FJwXjpiT5CaghTOPTSy5oomtkQSRZg+fE7PiGI//tccv5elO+++8Ktb+MSuc2J1I464rB9Nlq3llJv9tePP/voRwieGKt7AYQN1msWRXeuC1iFgrGbhxgZ6vVK6HZZq2E9q+NF6rTJDgBWUDggRgIAAJAMAJ0BKjQAMAA+tVKiTSckIyIqtAkA4BaJbADAXBgnTh8csKvA6iDeYF/PuDlsaWKaR44tQDpM/sAMHvkMIE8zxG4Drg3n3h8wZF6EqwUxwlh10YdSY7Clf/ZhO3Lcazd9TqG0cbag4eLu29gA/t6WOfpYIimPvMoCKSKfL9/O5VjcuheKMZyc7SCjspaGInXZQY0qwUfM2zfI66AkQOemxLTYx8P1XOWd50IPgUcf75MpMC92014EpfBt6/G9JY696bWalYsOX0RuQ8emjyMCvqboQY5XT+zJNFchp1vU21dL1dk15T0hRDHpqA34H1NzQuPc+ca6Pjcbtuv1G8cgoyFG3e2wt/EADo93pgaOlH1hXi5cJ/ktBQPn2/zMahzAoXbgVya05z6Rd6SHXKU9J39n2QI9EFv53M6m+cmyulscIvVlsWVYxZb/L5A5Mze0azYPog810u6566avTVRJBcG2BiCJCcHJ2vck6JMoj6MUiOrJ18WIn723RFTzqlcNIr3oIRZSiWCSuRhxD5fGj3ofzr6BYDJ4X5YpE4SRkv6P1XPAMThkJEjpmmnU1qArQjzK/H2y9/3rE/vahMHE/rof19pSK4Hw/NBY3rGlv+CZe6zy8xYPt9bdL8X4ywhhrTZq8fcrc7Ym4ipC0ytweC6fxvZ7/YPbXDJVI2F7aIXOmnl3SkP2bPMGeLLIpo6wsktTgLRvthzJpsb9GwdAKBfem58v3MlStfr4nOif2b08E/h4D+sihqwTY8kW1/W8ZWjAAA==" alt=""><span class="pct">12 %</span><b>Corporación Alianza para el Desarrollo Social</b></div>
-        <div class="socio"><img src="data:image/webp;base64,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" alt=""><span class="pct">12 %</span><b>Asociación Ecohorizonte</b></div>
-        <div class="socio"><img src="data:image/webp;base64,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" alt=""><span class="pct">12 %</span><b>Corporación para el Fomento y Desarrollo Territorial</b></div>
-        <div class="socio"><img src="data:image/webp;base64,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" alt=""><span class="pct">12 %</span><b>Sostenibilidad Estratégica S.A.S.</b></div>
+        <div class="socio mayor"><img src="logo-marulanda.png" alt="Escudo de Marulanda"><span class="pct">52 %</span><b>Municipio de Marulanda, Caldas</b></div>
+        <div class="socio"><img src="logo-corpoallianz.svg" alt=""><span class="pct">12 %</span><b>Corporación Alianza para el Desarrollo Social</b></div>
+        <div class="socio"><img src="logo-ecohorizonte.svg" alt=""><span class="pct">12 %</span><b>Asociación Ecohorizonte</b></div>
+        <div class="socio"><img src="logo-juntos.png" alt="Construyendo Juntos"><span class="pct">12 %</span><b>Corporación Construyendo Juntos</b></div>
+        <div class="socio"><img src="logo-sostenibilidad.svg" alt=""><span class="pct">12 %</span><b>Sostenibilidad Estratégica S.A.S.</b></div>
       </div>
       <div class="flecha"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></div>
       <div class="gc"><span class="nivel n2">Junta Directiva</span></div>
@@ -653,7 +701,7 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
         <div class="miembro"><b>Municipio de Marulanda</b><span>1 silla</span></div>
         <div class="miembro"><b>Corpoallianz</b><span>1 silla</span></div>
         <div class="miembro"><b>Asociación Ecohorizonte</b><span>1 silla</span></div>
-        <div class="miembro"><b>Juntos Construyendo</b><span>1 silla</span></div>
+        <div class="miembro"><b>Construyendo Juntos</b><span>1 silla</span></div>
         <div class="miembro"><b>Sostenibilidad Estratégica S.A.S.</b><span>1 silla</span></div>
       </div>
       <div class="flecha"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></div>
@@ -757,7 +805,7 @@ footer{background:#0A1629;color:rgba(255,255,255,.55);padding:44px 0;font-size:.
 
   // galería infinita
   const tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
-  tr.querySelectorAll('figure').forEach((f,i)=>{if(i>=12)f.setAttribute('aria-hidden','true')});
+  tr.querySelectorAll('figure').forEach((f,i)=>{if(i>=16)f.setAttribute('aria-hidden','true')});
 
   // contadores
   const fmt=(n,sep)=>sep?n.toLocaleString('es-CO'):String(n);
